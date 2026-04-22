@@ -1,35 +1,51 @@
-// Smyčka "while"
-let counter = 0;
-
-while (counter < 10) {
-    console.log(counter)
-    counter++;
+function rekniAhoj() {
+    console.log("Čus");
 }
 
-let i = 1;
+rekniAhoj();
+rekniAhoj();
 
-while (i <= 10) {
-    let message = i;
+let pozdrav = "Pozdrav!";
 
-    if (i === 7) {
-        message = "Ach ano, 7, mé oblíbené číslo!";
-    }
-
-    console.log(message)
-    i++;
+function ukazPozdrav() {
+    console.log(pozdrav)
 }
 
+function testLocal() {
+    let localValue = 123;
+    console.log(localValue)
+}
 
-for (let a =0; a < 10; a++) {
+ukazPozdrav();
+testLocal();
+
+
+if(true) {
+    var y = "var blok nerespektuje";
+}
+console.log(y);
+
+// Parametr & Argument
+
+function sayHello(name) {// name = parametr
+    console.log("Ahoj" + name);
+}
+
+sayHello("Alice");
+
+function addNumber(num1, num2) {
+    console.log(num1 + num2);
+    console.log(num1 - num2);
+    console.log(num1 * num2);
+    console.log(num1 / num2);
+}
+
+addNumber(5,8);
+
+function vypisCisla(začátek, konec) {
+   for (let a = začátek; a <= konec; a++) {
     console.log(a)
+   }
 }
-
-for (let b = 0; b < 10; b++) {
-    if (b === 5) break;
-    console.log(b);
-}
-
-for (let c = 0; c < 10; c++) {
-    if (c === 4) continue;
-    console.log(c);
-}
+    
+vypisCisla(2,15);
